@@ -1,4 +1,5 @@
 import time
+import winsound
 
 minuten = int(input("Bitte Minuten eingeben: "))
 sekunden = int(input("Bitte Sekunden eingeben: "))
@@ -25,6 +26,8 @@ def countdown(p,q):
         if(i==0 and j==-1):
             break
     if(i==0 and j==-1):
+        winsound.Beep(440,1000)
         print("Der Tee ist fertig!", end="\r")
+        winsound.Beep(440,1000)
         time.sleep(1)
 countdown(minuten,sekunden) #countdown(min,sec)
